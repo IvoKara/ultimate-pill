@@ -1,14 +1,24 @@
 <template>
-  <div>
-    <Logos mb-6 />
-    <Suspense>
-      <PageView />
-      <template #fallback>
-        <div op50 italic>
-          <span animate-pulse>Loading...</span>
-        </div>
-      </template>
-    </Suspense>
-    <InputEntry />
+  Start of content
+  <div
+    w-full h-200 bg-white
+    flex items-center justify-center
+    text-4xl
+  >
+    Content
+  </div>
+  <div
+    w-full h-200 bg-neutral-3
+    flex items-center justify-center
+    text-4xl
+  >
+    Content
+  </div>
+  <div
+    w-full h-200 bg-neutral-2
+    flex items-center justify-center
+    text-4xl
+  >
+    Content
   </div>
 </template>

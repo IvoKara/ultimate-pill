@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 42.285301 20.692801"
+   fill="none"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="ultimate-pill-logo.svg"
+   width="42.285301"
+   height="20.692801"
+   inkscape:version="1.2.2 (1:1.2.2+202212051550+b0a8486541)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+   <style>
+      rect, line {
+         stroke: #131212;
+      }
+
+      @media (prefers-color-scheme: dark) {
+      rect, line {
+        stroke: white;
+      }
+    }
+   </style>
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="7.7058824"
+     inkscape:cx="4.9312977"
+     inkscape:cy="-1.6870229"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <rect
+     x="2"
+     y="2"
+     width="38.285301"
+     height="16.692801"
+     rx="8.3463898"
+     stroke-width="4"
+     id="rect2" />
+  <line
+     x1="25.392105"
+     y1="0.90040016"
+     x2="25.392105"
+     y2="17.994499"
+     stroke-width="4"
+     id="line4" />
+</svg>

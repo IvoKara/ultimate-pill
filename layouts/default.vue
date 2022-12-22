@@ -1,9 +1,15 @@
 <template>
-  <main class="py-20 px-10 text-center">
+  <ShopBanner>
+    <span>
+      Безплатна доставка при поръчка на 2 или повече продукта.&nbsp;
+      <NuxtLink href="#" class="underline underline-offset-3">
+        Научи повече за условията за доставка.
+      </NuxtLink>
+    </span>
+  </ShopBanner>
+
+  <!-- <ShopHeader /> -->
+  <main>
     <slot />
-    <Footer />
-    <div class="mt-5 mx-auto text-center opacity-25 text-sm">
-      [Default Layout]
-    </div>
   </main>
 </template>

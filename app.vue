@@ -1,10 +1,9 @@
 <script setup>
 useHead({
-  title: 'Vitesse Nuxt 3',
+  title: 'Ultimate Pill',
   link: [
-    {
-      rel: 'icon', type: 'image/png', href: '/nuxt.png',
-    },
+    { rel: 'icon', type: 'image/svg+xml', href: '/ultimate-pill-logo.svg' },
+    // { rel: 'icon', type: 'image/png', href: '/favicon.ico' },
   ],
 })
 </script>
@@ -22,8 +21,8 @@ html, body , #__nuxt{
   padding: 0;
 }
 
-html.dark {
+/* html.dark {
   background: #222;
   color: white;
-}
+} */
 </style>
