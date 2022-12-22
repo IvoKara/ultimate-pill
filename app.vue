@@ -2,7 +2,7 @@
 useHead({
   title: 'Ultimate Pill',
   link: [
-    { rel: 'icon', type: 'image/svg+xml', href: '/ultimate-pill-logo.svg' },
+    { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
     // { rel: 'icon', type: 'image/png', href: '/favicon.ico' },
   ],
 })

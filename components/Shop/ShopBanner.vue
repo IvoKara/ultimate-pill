@@ -43,7 +43,7 @@ function closeBanner() {
       'sticky left-0 right-0 top-0': isSticky,
     }"
   >
-    <div class="py-2.5 px-5 flex items-center lg:justify-center justify-between gap-5 h-full">
+    <div class="py-2.5 px-grid-br flex items-center lg:justify-center justify-between gap-5 h-full">
       <slot>
         {{ label }}
       </slot>
