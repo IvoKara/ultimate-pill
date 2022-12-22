@@ -30,9 +30,8 @@ export default defineConfig({
     }),
 
     presetWebFonts({
-      provider: 'google',
       fonts: {
-        sans: 'Inter, DM Sans',
+        sans: ['DM Sans', 'Inter'],
         serif: 'DM Serif Display',
         mono: 'DM Mono',
       },
