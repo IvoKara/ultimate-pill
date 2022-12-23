@@ -20,17 +20,22 @@ const profileIconVisible = breakpoints.greaterOrEqual('md')
       </div>
       <div class="rightItems h-70% xl:h-80%">
         <div v-if="menuButtonVisible">
-          <span i-ri:search-line />
+          <span sr-only>Търсене</span>
+          <span i-ri:search-line w-6 h-6 inline-block />
         </div>
         <div v-if="profileIconVisible">
-          <!-- <span sr-only xl:not-sr-only>Профил</span> -->
-          <span i-majesticons:user-line />
+          <div flex items-center gap-3>
+            <span sr-only xl:not-sr-only>Профил</span>
+            <span i-majesticons:user-line w-6 h-6 inline-block />
+          </div>
         </div>
         <div>
-          <span i-material-symbols:favorite-outline />
+          <span sr-only>Любими продукти</span>
+          <span i-material-symbols:favorite-outline w-6 h-6 inline-block />
         </div>
         <div>
-          <span i-mdi:cart-outline />
+          <span sr-only>Количка</span>
+          <span i-mdi:cart-outline w-6 h-6 inline-block />
         </div>
       </div>
     </nav>
@@ -54,12 +59,6 @@ const profileIconVisible = breakpoints.greaterOrEqual('md')
     &:not(:last-child) {
       border-right: 1px solid #7287A6;
       padding-right: 1rem;
-    }
-
-    & > span {
-      width: 1.5rem;
-      height: 1.5rem;
-      display: inline-block;
     }
   }
 }
