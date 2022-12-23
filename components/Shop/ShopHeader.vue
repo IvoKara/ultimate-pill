@@ -10,7 +10,7 @@ const profileIconVisible = breakpoints.greaterOrEqual('md')
 <template>
   <header class="sticky left-0 right-0 top-0">
     <slot name="banner" />
-    <nav class="border-b-1 border-black backdrop-blur h-16 lg:h-20 flex items-center justify-between gap-20 px-grid-br py-2">
+    <nav class="border-b-1 border-black backdrop-blur h-16 lg:(h-20 gap-20) flex items-center justify-between gap-4 px-grid-br py-2">
       <div
         flex items-center justify-between gap-12 :class="{ 'w-210': navbarItemsVisible }"
       >
@@ -55,21 +55,21 @@ const profileIconVisible = breakpoints.greaterOrEqual('md')
         <div class="rightIcons h-70% xl:h-80%">
           <div v-if="smallLaptopScreen">
             <span sr-only>Търсене</span>
-            <span i-ri:search-line w-6 h-6 inline-block cursor-pointer />
+            <span i-ri:search-line sm="w-6 h-6" inline-block cursor-pointer />
           </div>
           <div v-if="profileIconVisible">
             <div flex items-center gap-3>
               <span sr-only xl="not-sr-only cursor-pointer">Профил</span>
-              <span i-majesticons:user-line w-6 h-6 inline-block cursor-pointer />
+              <span i-majesticons:user-line sm="w-6 h-6" inline-block cursor-pointer />
             </div>
           </div>
           <div>
             <span sr-only>Любими продукти</span>
-            <span i-material-symbols:favorite-outline w-6 h-6 inline-block cursor-pointer />
+            <span i-material-symbols:favorite-outline sm="w-6 h-6" inline-block cursor-pointer />
           </div>
           <div>
             <span sr-only>Количка</span>
-            <span i-mdi:cart-outline w-6 h-6 inline-block cursor-pointer />
+            <span i-mdi:cart-outline sm="w-6 h-6" inline-block cursor-pointer />
           </div>
         </div>
       </div>
