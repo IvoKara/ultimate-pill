@@ -12,7 +12,7 @@ const profileIconVisible = breakpoints.greaterOrEqual('md')
     <slot name="banner" />
     <nav class="border-b-1 border-black backdrop-blur h-16 lg:(h-20 gap-20) flex items-center justify-between gap-4 px-grid-br py-2">
       <div
-        flex items-center justify-between gap-12 :class="{ 'w-210': navbarItemsVisible }"
+        flex items-center justify-between gap-12 xl:w-210
       >
         <div class="flex gap-2 items-center">
           <div v-if="smallLaptopScreen" i-majesticons:menu-alt-line w-10 h-10 />
