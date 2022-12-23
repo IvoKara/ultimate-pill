@@ -12,8 +12,11 @@
     </template>
   </ShopHeader>
 
-  <ShopCookiesBanner />
   <main>
     <slot />
   </main>
+
+  <ShopCookiesBanner />
+
+  <ShopFooter />
 </template>
