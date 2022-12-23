@@ -2,40 +2,75 @@
 import designBreakpoints from '../../breakpoints.json'
 
 const breakpoints = useBreakpoints(designBreakpoints)
-const menuButtonVisible = breakpoints.smaller('lg')
+const smallLaptopScreen = breakpoints.smallerOrEqual('lg')
+const navbarItemsVisible = breakpoints.greaterOrEqual('xl')
 const profileIconVisible = breakpoints.greaterOrEqual('md')
 </script>
 
 <template>
   <header class="sticky left-0 right-0 top-0">
     <slot name="banner" />
-    <nav class="border-b-1 border-black backdrop-blur h-16 lg:h-20 flex items-center justify-between px-grid-br py-2">
-      <div class="flex gap-2 items-center">
-        <div
-          v-if="menuButtonVisible"
-          i-majesticons:menu-alt-line
-          w-10 h-10
-        />
-        <img inline-block h-8 lg:h-10 src="/ultimate-pill.svg">
+    <nav class="border-b-1 border-black backdrop-blur h-16 lg:h-20 flex items-center justify-between gap-20 px-grid-br py-2">
+      <div
+        flex items-center justify-between gap-12 :class="{ 'w-210': navbarItemsVisible }"
+      >
+        <div class="flex gap-2 items-center">
+          <div v-if="smallLaptopScreen" i-majesticons:menu-alt-line w-10 h-10 />
+          <img inline-block h-8 lg:h-10 src="/ultimate-pill.svg">
+        </div>
+        <ul v-if="navbarItemsVisible" flex justify-between gap-2 w="75%">
+          <li>
+            <Dropdown label="Продукти" :items="['Продукт1', 'Продукт2', 'Продукт3']" />
+          </li>
+          <li>
+            <NuxtLink href="#">
+              За нас
+            </NuxtLink>
+          </li><li>
+            <NuxtLink href="#">
+              Блог
+            </NuxtLink>
+          </li><li>
+            <NuxtLink href="#">
+              Работи с нас
+            </NuxtLink>
+          </li><li>
+            <NuxtLink href="#">
+              ЧЗВ
+            </NuxtLink>
+          </li><li>
+            <NuxtLink href="#">
+              Контакти
+            </NuxtLink>
+          </li>
+        </ul>
       </div>
-      <div class="rightItems h-70% xl:h-80%">
-        <div v-if="menuButtonVisible">
-          <span sr-only>Търсене</span>
-          <span i-ri:search-line w-6 h-6 inline-block />
-        </div>
-        <div v-if="profileIconVisible">
-          <div flex items-center gap-3>
-            <span sr-only xl:not-sr-only>Профил</span>
-            <span i-majesticons:user-line w-6 h-6 inline-block />
+
+      <div flex gap-8 items-center h-full>
+        <InputText
+          v-if="!smallLaptopScreen"
+          placeholder="Търсене в целия магазин..." type="text"
+          icon="ri:search-line"
+        />
+        <div class="rightIcons h-70% xl:h-80%">
+          <div v-if="smallLaptopScreen">
+            <span sr-only>Търсене</span>
+            <span i-ri:search-line w-6 h-6 inline-block cursor-pointer />
           </div>
-        </div>
-        <div>
-          <span sr-only>Любими продукти</span>
-          <span i-material-symbols:favorite-outline w-6 h-6 inline-block />
-        </div>
-        <div>
-          <span sr-only>Количка</span>
-          <span i-mdi:cart-outline w-6 h-6 inline-block />
+          <div v-if="profileIconVisible">
+            <div flex items-center gap-3>
+              <span sr-only xl="not-sr-only cursor-pointer">Профил</span>
+              <span i-majesticons:user-line w-6 h-6 inline-block cursor-pointer />
+            </div>
+          </div>
+          <div>
+            <span sr-only>Любими продукти</span>
+            <span i-material-symbols:favorite-outline w-6 h-6 inline-block cursor-pointer />
+          </div>
+          <div>
+            <span sr-only>Количка</span>
+            <span i-mdi:cart-outline w-6 h-6 inline-block cursor-pointer />
+          </div>
         </div>
       </div>
     </nav>
@@ -43,7 +78,7 @@ const profileIconVisible = breakpoints.greaterOrEqual('md')
 </template>
 
 <style scoped lang="less">
-.rightItems {
+.rightIcons {
   display: flex;
   align-items: stretch;
 
