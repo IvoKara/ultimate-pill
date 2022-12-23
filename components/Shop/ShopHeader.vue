@@ -17,25 +17,48 @@ const menuButtonVisible = breakpoints.smaller('lg')
         />
         <img inline-block h-8 lg:h-10 src="/ultimate-pill.svg">
       </div>
-      <div flex h-full items-center gap-4>
-        <div
-          v-if="menuButtonVisible"
-          i-ri:search-line
-          w-6 h-6
-        />
-        <div
-          i-ph:user
-          w-6 h-6
-        />
-        <div
-          i-material-symbols:favorite-outline
-          w-6 h-6
-        />
-        <div
-          i-mdi:cart-outline
-          w-6 h-6
-        />
+      <div class="rightItems h-70% xl:h-80%">
+        <div v-if="menuButtonVisible">
+          <span i-ri:search-line />
+        </div>
+        <div>
+          <span i-majesticons:user-line />
+        </div>
+        <div>
+          <span i-material-symbols:favorite-outline />
+        </div>
+        <div>
+          <span i-mdi:cart-outline />
+        </div>
       </div>
     </nav>
   </header>
 </template>
+
+<style scoped lang="less">
+.rightItems {
+  display: flex;
+  align-items: stretch;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:not(:first-child) {
+      padding-left: 1rem;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid #7287A6;
+      padding-right: 1rem;
+    }
+
+    & > span {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: inline-block;
+    }
+  }
+}
+</style>
