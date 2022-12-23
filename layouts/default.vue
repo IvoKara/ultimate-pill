@@ -11,7 +11,9 @@
       </ShopBanner>
     </template>
   </ShopHeader>
-  <!-- <main overflow-x-hidden> -->
-  <slot />
-  <!-- </main> -->
+
+  <ShopCookiesBanner />
+  <main>
+    <slot />
+  </main>
 </template>
