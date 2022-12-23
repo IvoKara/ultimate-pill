@@ -3,6 +3,7 @@ import designBreakpoints from '../../breakpoints.json'
 
 const breakpoints = useBreakpoints(designBreakpoints)
 const menuButtonVisible = breakpoints.smaller('lg')
+const profileIconVisible = breakpoints.greaterOrEqual('md')
 </script>
 
 <template>
@@ -21,7 +22,8 @@ const menuButtonVisible = breakpoints.smaller('lg')
         <div v-if="menuButtonVisible">
           <span i-ri:search-line />
         </div>
-        <div>
+        <div v-if="profileIconVisible">
+          <!-- <span sr-only xl:not-sr-only>Профил</span> -->
           <span i-majesticons:user-line />
         </div>
         <div>
