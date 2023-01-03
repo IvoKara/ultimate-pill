@@ -20,11 +20,13 @@ watch(modelValue, (newValue) => {
 </script>
 
 <template>
-  <label class="border-1 border-black rounded-6 py-3 px-5 flex items-center gap-2">
-    <div v-if="icon" class="w-5 h-5" :class="`i-${icon}`" />
-    <input
-      v-model="modelValue" :type="type" :disabled="disabled" :placeholder="placeholder"
-      class="p-none bg-transparent border-none focus:ring-none w-full truncate"
-    >
-  </label>
+  <div class="border-1 border-black rounded-6 py-3 px-5">
+    <label class="flex items-center gap-2">
+      <div v-if="icon" class="w-5 h-5" :class="`i-${icon}`" />
+      <input
+        v-model="modelValue" :type="type" :disabled="disabled" :placeholder="placeholder"
+        class="p-none bg-transparent border-none focus:ring-none w-full truncate"
+      >
+    </label>
+  </div>
 </template>

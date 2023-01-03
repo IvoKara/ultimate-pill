@@ -1,12 +1,3 @@
-<script setup lang="ts">
-import designBreakpoints from '../../breakpoints.json'
-
-const breakpoints = useBreakpoints(designBreakpoints)
-const smallLaptopScreen = breakpoints.smallerOrEqual('lg')
-const navbarItemsVisible = breakpoints.greaterOrEqual('xl')
-const profileIconVisible = breakpoints.greaterOrEqual('md')
-</script>
-
 <template>
   <header class="sticky left-0 right-0 top-0">
     <slot name="banner" />
@@ -15,10 +6,12 @@ const profileIconVisible = breakpoints.greaterOrEqual('md')
         flex items-center justify-between gap-12 xl:w-210
       >
         <div class="flex gap-2 items-center">
-          <div v-if="smallLaptopScreen" i-majesticons:menu-alt-line w-10 h-10 />
-          <img inline-block h-8 lg:h-10 src="/ultimate-pill.svg">
+          <div xl:hidden i-majesticons:menu-alt-line w-10 h-10 />
+          <NuxtLink href="/">
+            <img inline-block h-8 lg:h-10 src="/ultimate-pill.svg">
+          </NuxtLink>
         </div>
-        <ul v-if="navbarItemsVisible" flex justify-between gap-2 w="75%">
+        <ul hidden xl="flex justify-between gap-2 w-75%">
           <li>
             <Dropdown label="Продукти" :items="['Продукт1', 'Продукт2', 'Продукт3']" />
           </li>
@@ -48,18 +41,18 @@ const profileIconVisible = breakpoints.greaterOrEqual('md')
 
       <div flex gap-8 items-center h-full>
         <InputText
-          v-if="!smallLaptopScreen"
+          hidden lg:block
           placeholder="Търсене в целия магазин..." type="text"
           icon="ri:search-line"
         />
         <div class="rightIcons h-70% xl:h-80%">
-          <div v-if="smallLaptopScreen">
+          <div class="search">
             <span sr-only>Търсене</span>
             <span i-ri:search-line sm="w-6 h-6" inline-block cursor-pointer />
           </div>
-          <div v-if="profileIconVisible">
+          <div class="profile">
             <div flex items-center gap-3>
-              <span sr-only xl="not-sr-only cursor-pointer">Профил</span>
+              <span sr-only xxl="not-sr-only cursor-pointer">Профил</span>
               <span i-majesticons:user-line sm="w-6 h-6" inline-block cursor-pointer />
             </div>
           </div>
@@ -86,6 +79,18 @@ const profileIconVisible = breakpoints.greaterOrEqual('md')
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media (min-width: 992px){
+      &.search {
+        display: none;
+      }
+    }
+
+    @media (max-width: 767px){
+      &.profile {
+        display: none;
+      }
+    }
 
     &:not(:first-child) {
       padding-left: 1rem;

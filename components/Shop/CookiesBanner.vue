@@ -18,8 +18,6 @@ const hasBgColor = Object.keys(attrs).some(key => /^(.{2,}\:)?bg(.+)$/.test(key)
 
 const isClosed = ref(props.closed)
 
-const showCookies = useBreakpoints(designBreakpoints).greaterOrEqual('xl')
-
 function closeCookies() {
   isClosed.value = true
   emit('update:closed', true)
@@ -29,8 +27,10 @@ function closeCookies() {
 <template>
   <!-- min-w-1920px -->
   <div
-    v-if="showCookies && !isClosed"
-    class="font-400 text-#F5F5F5 xl:(text-3.5 leading-5) xxl:text-base py-2.5 px-grid-br flex items-center justify-between xxl:gap-15 gap-20"
+    v-if="!isClosed"
+    class="font-400 text-#F5F5F5 text-3.5 leading-5 py-2.5 px-grid-br flex items-center justify-between gap-4
+      lg:gap-20
+      xxl:(text-base gap-15)"
     :class="{
       'bg-#131212': !hasBgColor,
       'fixed left-0 right-0 bottom-0': isSticky,
@@ -43,12 +43,12 @@ function closeCookies() {
         Повече информация.
       </NuxtLink>
     </span>
-    <div class="flex gap-5">
-      <PillButton class="b-1 border-white text-#EB2525" @click="closeCookies()">
-        Отказвам
-      </PillButton>
+    <div class="grid grid-cols-[auto] gap-2.5 md:(grid-cols-[repeat(2,auto)] gap-4) lg:gap-5">
       <PillButton class="b-1 border-white text-black bg-white w-max" @click="closeCookies()">
         Съгласявам се със всички
+      </PillButton>
+      <PillButton class="b-1 border-white text-#EB2525" @click="closeCookies()">
+        Отказвам
       </PillButton>
     </div>
   </div>
