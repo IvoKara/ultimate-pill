@@ -4,7 +4,7 @@
 
 <template>
   <footer class="bg-dark-gradient min-h-200 text-#F1F1F1 px-grid-br py-20">
-    <img inline-block h-8 lg:h-10 src="/ultimate-pill-light.svg" stroke-white>
+    <img inline-block h-8 lg:h-10 stroke-white src="/ultimate-pill-light.svg" alt="Ultimate Pill logo">
     <hr>
     <p class="py-8 text-#BFBFBF">
       Всички права запазени © 2022, Ultimatepill

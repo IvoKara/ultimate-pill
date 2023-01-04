@@ -6,7 +6,7 @@
         <div class="flex gap-2 items-center shrink-0">
           <div xl:hidden i-majesticons:menu-alt-line w-10 h-10 />
           <NuxtLink href="/">
-            <img inline-block h-8 lg:h-10 src="/ultimate-pill.svg">
+            <img inline-block h-8 lg:h-10 src="/ultimate-pill.svg" alt="Ultimate Pill logo">
           </NuxtLink>
         </div>
         <ul hidden xl="flex xxl:gap-2 shrink-0">
