@@ -28,8 +28,9 @@ function closeCookies() {
   <!-- min-w-1920px -->
   <div
     v-if="!isClosed"
-    class="font-400 text-#F5F5F5 text-3.5 leading-5 py-2.5 px-grid-br flex items-center justify-between gap-4
-      lg:gap-20
+    class="font-400 text-#F5F5F5 text-3.5 leading-5 py-2.5 px-grid-br flex flex-col items-center justify-between gap-4
+      md:flex-row
+      xl:gap-20
       xxl:(text-base gap-15)"
     :class="{
       'bg-#131212': !hasBgColor,
@@ -43,13 +44,29 @@ function closeCookies() {
         Повече информация.
       </NuxtLink>
     </span>
-    <div class="grid grid-cols-[auto] gap-2.5 md:(grid-cols-[repeat(2,auto)] gap-4) lg:gap-5">
-      <PillButton class="b-1 border-white text-black bg-white w-max" @click="closeCookies()">
+    <div class="row-1-on-md-only grid grid-cols-[repeat(2,auto)] gap-4 lg:gap-5 font-500">
+      <PillButton class="small-on-md-only border-2 border-#91EF65 text-#131212 bg-#91EF65 md:w-max" @click="closeCookies()">
         Съгласявам се със всички
       </PillButton>
-      <PillButton class="b-1 border-white text-#EB2525" @click="closeCookies()">
+      <PillButton class="small-on-md-only order-first b-2 border-#F1F1F1 text-#F1F1F1" @click="closeCookies()">
         Отказвам
       </PillButton>
     </div>
   </div>
 </template>
+
+<style scoped>
+@media (min-width: 768px) and (max-width: 992px) {
+  .small-on-md-only {
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+  }
+
+  .row-1-on-md-only {
+    grid-template-columns: auto;
+    gap: 0.625rem;
+  }
+}
+</style>
