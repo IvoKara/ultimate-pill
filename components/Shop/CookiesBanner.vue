@@ -48,7 +48,7 @@ function closeCookies() {
       <PillButton class="small-on-md-only border-2 border-#91EF65 text-#131212 bg-#91EF65 md:w-max" @click="closeCookies()">
         Съгласявам се със всички
       </PillButton>
-      <PillButton class="small-on-md-only order-first b-2 border-#F1F1F1 text-#F1F1F1" @click="closeCookies()">
+      <PillButton class="small-on-md-only order-first md:order-last lg:order-first b-2 border-#F1F1F1 text-#F1F1F1" @click="closeCookies()">
         Отказвам
       </PillButton>
     </div>
