@@ -3,10 +3,12 @@
     <slot name="banner" />
     <nav class="border-b-1  border-black backdrop-blur h-16 lg:(h-20 gap-10) xxl:gap-50 xxl:text-4.25 flex items-center justify-between xxl:justify-start gap-4 px-grid-br py-2">
       <div class="flex items-center xl:gap-14 xxl:gap-18 w-max shrink-0">
-        <div class="flex gap-2 items-center shrink-0">
+        <div class="flex gap-2 items-center">
           <div xl:hidden i-majesticons:menu-alt-line w-10 h-10 />
           <NuxtLink href="/">
-            <img inline-block h-8 lg:h-10 src="/ultimate-pill.svg" alt="Ultimate Pill logo">
+            <nuxt-img src="/ultimate-pill.svg" alt="Ultimate Pill logo" :preload="true"
+              h-8 lg:h-10
+            />
           </NuxtLink>
         </div>
         <ul hidden xl="flex xxl:gap-2 shrink-0">

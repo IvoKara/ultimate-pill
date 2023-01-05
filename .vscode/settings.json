@@ -22,9 +22,6 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "window.autoDetectColorScheme": true,
-  "window.dialogStyle": "custom",
-  "window.nativeTabs": true, // this is great, macOS only
-  "window.titleBarStyle": "custom",
   "workbench.activityBar.visible": true,
   "workbench.colorTheme": "Default Dark+",
   "workbench.editor.closeOnFileDelete": true,
@@ -36,9 +33,6 @@
   "workbench.fontAliasing": "antialiased",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.list.smoothScrolling": true,
-  // "workbench.preferredDarkColorTheme": "Vitesse Dark",
-  // "workbench.preferredLightColorTheme": "Vitesse Light",
-  // "workbench.productIconTheme": "icons-carbon",
   "workbench.sideBar.location": "left",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.expandMode": "singleClick",
@@ -86,6 +80,9 @@
     "warning",
     "error"
   ],
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  },
   "errorLens.excludeBySource": [
     "cSpell",
     "Grammarly",
@@ -108,15 +105,10 @@
     "jsonc",
     "json5"
   ],
-  "github.copilot.enable": {
-    "*": true,
-    "markdown": true,
-    "plaintext": false,
-    "yaml": false
-  },
   "cSpell.allowCompoundWords": true,
   "cSpell.language": "en,en-US",
   "css.lint.hexColorLength": "ignore",
+  "css.lint.unknownAtRules": "ignore",
   "githubIssues.workingIssueFormatScm": "#${issueNumberLabel}",
   "githubPullRequests.fileListLayout": "tree",
   "gitlens.codeLens.authors.enabled": false,
@@ -177,7 +169,6 @@
   "volar.completion.preferredTagNameCase": "pascal",
   "volar.showWelcomePage": false,
   "volar.takeOverMode.enabled": "auto",
-  "windicss.enableCodeFolding": false,
   "prettier.enable": false, // I only use Prettier for manually formatting
   "prettier.printWidth": 200,
   "prettier.semi": false,
