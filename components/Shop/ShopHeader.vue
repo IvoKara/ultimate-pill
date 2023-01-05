@@ -2,7 +2,7 @@
   <header class="sticky left-0 right-0 top-0">
     <slot name="banner" />
     <nav class="border-b-1  border-black backdrop-blur h-16 lg:(h-20 gap-10) xxl:gap-50 xxl:text-4.25 flex items-center justify-between xxl:justify-start gap-4 px-grid-br py-2">
-      <div class="flex items-center xl:gap-14 xxl:gap-18 w-max">
+      <div class="flex items-center xl:gap-14 xxl:gap-18 w-max shrink-0">
         <div class="flex gap-2 items-center shrink-0">
           <div xl:hidden i-majesticons:menu-alt-line w-10 h-10 />
           <NuxtLink href="/">
@@ -33,7 +33,7 @@
 
       <div flex gap-8 items-center h-full xxl:w-full>
         <InputText
-          hidden lg:block lg:lt-xl:w-112 xxl:flex-grow
+          hidden lg:block at-lg:w112 xxl:flex-grow
           placeholder="Търсене в целия магазин" type="text"
           icon="ri:search-line"
         />
