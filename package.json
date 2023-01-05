@@ -11,6 +11,9 @@
     "postinstall": "nuxi prepare",
     "generate": "nuxi generate"
   },
+  "dependencies": {
+    "@anu-vue/nuxt": "^0.12.0"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.34.0",
     "@iconify/json": "^2.2.2",

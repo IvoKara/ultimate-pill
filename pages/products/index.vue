@@ -1,24 +1,7 @@
 <template>
-  Start of content
-  <div
-    w-full h-200 bg-white
-    flex items-center justify-center
-    text-4xl
-  >
-    Content
-  </div>
-  <div
-    w-full h-200 bg-neutral-3
-    flex items-center justify-center
-    text-4xl
-  >
-    Content
-  </div>
-  <div
-    w-full h-200 bg-neutral-2
-    flex items-center justify-center
-    text-4xl
-  >
-    Content
+  <div h-200 flex flex-col items-center justify-center>
+    <p text-5xl font-bold text-center>
+      Всички налични Продукти
+    </p>
   </div>
 </template>
