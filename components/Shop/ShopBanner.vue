@@ -74,7 +74,7 @@ function closeBanner() {
 }
 
 .close-up-leave-to {
-  transform: translateY(-5rem);
+  transform: translateY(-10rem);
   /* display: block; */
   /* overflow: hidden; */
   /* line-height: 0; */

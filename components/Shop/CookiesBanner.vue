@@ -76,10 +76,10 @@ function closeCookies() {
 .close-down-leave-active {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 400ms;
+  transition-duration: 1s;
 }
 
 .close-down-leave-to {
-  transform: translateY(5rem);
+  transform: translateY(10rem);
 }
 </style>
