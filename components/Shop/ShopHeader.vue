@@ -1,3 +1,13 @@
+<script setup lang="ts">
+const menuItems = ref<MenuItems>([
+  { label: 'За нас', to: '/about' },
+  { label: 'Блог', to: '/blog' },
+  { label: 'Работи с нас', to: '/work-with-us' },
+  { label: 'ЧЗВ', to: '/help' },
+  { label: 'Контанти', to: '/contacts' },
+])
+</script>
+
 <template>
   <header class="sticky left-0 right-0 top-0">
     <slot name="banner" />
@@ -6,7 +16,8 @@
         <div class="flex gap-2 items-center">
           <div xl:hidden i-majesticons:menu-alt-line w-10 h-10 />
           <NuxtLink href="/">
-            <nuxt-img src="/ultimate-pill.svg" alt="Ultimate Pill logo" :preload="true"
+            <nuxt-img
+              src="/ultimate-pill.svg" alt="Ultimate Pill logo" :preload="true"
               h-8 lg:h-10
             />
           </NuxtLink>
@@ -20,14 +31,14 @@
               hover:border-black active:border-black
             />
           </li>
-          <li v-for="text in ['За нас', 'Блог', 'Работи с нас', 'ЧЗВ', 'Контакти']" :key="text">
+          <li v-for="item in menuItems" :key="item.to">
             <NuxtLink
-              href="#"
+              :to="item.to"
               inline-block px-4 pt-1.5 pb-2 border="2 transparent" rounded-6
               transition-border-color-500
               hover:border-black active:border-black
             >
-              {{ text }}
+              {{ item.label }}
             </NuxtLink>
           </li>
         </ul>
