@@ -4,5 +4,11 @@ declare global {
     label: string
     to: string
   }
-   type MenuItems = MenuItem[]
+
+  type MenuItems = MenuItem[]
+
+  interface SocialIconLink {
+    icon: `i-${string}`
+    to: string
+  }
 }

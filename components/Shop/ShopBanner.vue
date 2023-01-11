@@ -75,9 +75,6 @@ function closeBanner() {
 
 .close-up-leave-to {
   transform: translateY(-10rem);
-  /* display: block; */
-  /* overflow: hidden; */
-  /* line-height: 0; */
   min-height: 0;
   height: 0;
 }
