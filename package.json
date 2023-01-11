@@ -4,7 +4,7 @@
   "scripts": {
     "build": "nuxi build",
     "dev": "nuxi dev",
-    "preview": "nuxi preview",
+    "preview": "HOST=localhost PORT=3001 nuxi preview",
     "start": "node .output/server/index.mjs",
     "lint": "eslint .",
     "lint:fix": "eslint --fix --ignore-path .gitignore --ext .vue,.js,.jsx,.ts,.tsx",
