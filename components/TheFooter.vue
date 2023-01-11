@@ -64,10 +64,8 @@ const socialIcons = ref<SocialIconLink[]>([
       </div>
 
       <div flex flex-col gap-10>
-        <!-- separate component -->
-        <ShopSocialIcons :items="socialIcons" />
-        <!-- separate component -->
-        <ShopPaymentMethods />
+        <FooterSocialIcons :items="socialIcons" />
+        <PaymentMethods />
       </div>
     </section>
     <p border="t-1 white" py-3 mt-5 px-grid-br text="#BFBFBF 3.5 center">

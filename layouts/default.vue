@@ -1,22 +1,22 @@
 <template>
-  <ShopHeader>
+  <TheHeader>
     <template #banner>
-      <ShopBanner :is-sticky="false">
+      <Banner :is-sticky="false">
         <span>
           Безплатна доставка при поръчка на 2 или повече продукта.&nbsp;
           <NuxtLink href="#" class="underline underline-1">
             Научи повече за условията за доставка.
           </NuxtLink>
         </span>
-      </ShopBanner>
+      </Banner>
     </template>
-  </ShopHeader>
+  </TheHeader>
 
   <main>
     <slot />
   </main>
 
-  <ShopCookiesBanner />
+  <CookiesBanner />
 
-  <ShopFooter />
+  <TheFooter />
 </template>
