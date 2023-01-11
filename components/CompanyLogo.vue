@@ -1,8 +1,8 @@
 <script setup lang="ts">
 withDefaults(defineProps<{
-  light: boolean
-  to: string
-  doesRedirect: boolean
+  light?: boolean
+  to?: string
+  doesRedirect?: boolean
 }>(), {
   light: false,
   to: '/',

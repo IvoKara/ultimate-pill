@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import designBreakpoints from '../../breakpoints.json'
-
 const props = withDefaults(defineProps<{
   closed?: boolean
   isSticky?: boolean
@@ -45,11 +43,11 @@ function closeCookies() {
           Повече информация.
         </NuxtLink>
       </span>
-      <div class="row-1-on-md-only grid grid-cols-[repeat(2,auto)] gap-4 lg:gap-5 font-500">
-        <PillButton class="small-on-md-only border-2 border-#91EF65 text-#131212 bg-#91EF65 md:w-max" @click="closeCookies()">
+      <div class="at-md:(grid-cols-[auto] gap-2.5) grid grid-cols-[repeat(2,auto)] gap-4 lg:gap-5 font-500">
+        <PillButton class="at-md:(py-1.4 px-2.6) border-2 border-#91EF65 text-#131212 bg-#91EF65 md:w-max" @click="closeCookies()">
           Съгласявам се със всички
         </PillButton>
-        <PillButton class="small-on-md-only order-first md:order-last lg:order-first b-2 border-#F1F1F1 text-#F1F1F1" @click="closeCookies()">
+        <PillButton class="at-md:(py-1.4 px-2.6) order-first md:order-last lg:order-first b-2 border-#F1F1F1 text-#F1F1F1" @click="closeCookies()">
           Отказвам
         </PillButton>
       </div>
@@ -58,20 +56,6 @@ function closeCookies() {
 </template>
 
 <style scoped>
-@media (min-width: 768px) and (max-width: 992px) {
-  .small-on-md-only {
-    padding-top: 0.35rem;
-    padding-bottom: 0.35rem;
-    padding-left: 0.65rem;
-    padding-right: 0.65rem;
-  }
-
-  .row-1-on-md-only {
-    grid-template-columns: auto;
-    gap: 0.625rem;
-  }
-}
-
 .close-down-enter-active,
 .close-down-leave-active {
   transition-property: transform;

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  modelValue: string
-  multiple: boolean
+  modelValue?: string
+  multiple?: boolean
 }>(), {
   multiple: false,
   modelValue: 'BG',
